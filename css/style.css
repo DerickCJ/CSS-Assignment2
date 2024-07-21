@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  /* box-sizing: border-box; */
+  color: #ffffff
+}
+
+body {
+
+  background: linear-gradient(to right, rgb(254, 254, 165), rgb(255, 255, 232), rgb(255, 255, 165));
+}
+
+header {
+  display: flex;
+  width: 85%;
+  height: 100px;
+  position: fixed;
+  left: 8%;
+  top: 15px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+  z-index: 999;
+}
+
+menu {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 800;
+  text-shadow: 3px 3px 8px rgb(0, 0, 0), -2px -2px 3px rgb(255, 0, 0);
+}
+
+
+li a:hover {
+  color: rgba(255, 0, 0, 1);
+  text-shadow: 3px 3px 10px rgb(255, 0, 0);
+}
+
+menu::before {
+  content: "";
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  background-image: url(../image/Logo1.png);
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  transition: all .3s ease-in-out;
+}
+
+.scrolledHeader {
+  height: 50px;
+  border-radius: 25px;
+
+
+}
+
+.scrolledHeader menu::before {
+  height: 50px;
+  width: 50px;
+  transform: rotate(360deg);
+}
+
+.masthead {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../image/0.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(100% 0, 100% 100%, 85% 90%, 15% 90%, 0 100%, 0 0);
+}
+
+
+.mask {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 0);
+  transition: clip-path 0.4s ease-in-out;
+}
+
+h2:nth-child(1) {
+  font-size: 2em;
+  position: absolute;
+  left: 10%;
+  top: 40%;
+}
+
+h2:nth-child(2) {
+  font-size: 2.5em;
+  position: absolute;
+  left: 22%;
+  top: 50%;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h3,
+p {
+  color: #000;
+  text-align: center;
+
+}
+
+
+/* 
+p {
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
+
+} */
+
+.scrolledMask {
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 100% 0, 100% 100%, 50% 100%, 50% 0);
+}
+
+.sec2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin-top: 5%;
+
+}
+
+.sec2 .oval {
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(to right, rgb(132, 228, 252), rgb(203, 246, 255));
+  clip-path: ellipse(50% 50% at 50% 50%);
+  transform: rotate(20deg) translateX(-10%);
+  animation-name: ovalMove1;
+  animation-duration: 5S;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes ovalMove1 {
+  0% {
+    transform: rotate(20deg) translateX(-10%) translateY(0);
+  }
+
+  25% {
+    transform: rotate(20deg) translateX(-10%) translateY(-15px);
+  }
+
+  100% {
+    transform: rotate(20deg) translateX(-10%) translateY(30px);
+  }
+}
+
+
+.sec3 .oval {
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(to left, rgb(132, 228, 252), rgb(203, 246, 255));
+  clip-path: ellipse(50% 50% at 50% 50%);
+  transform: rotate(-20deg) translateX(10%);
+  animation-name: ovalMove2;
+  animation-duration: 5S;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ovalMove2 {
+  0% {
+    transform: rotate(-20deg) translateX(10%) translateY(0);
+  }
+
+  25% {
+    transform: rotate(-20deg) translateX(10%) translateY(15px);
+  }
+
+  100% {
+    transform: rotate(-20deg) translateX(10%) translateY(-30px);
+  }
+}
+
+
+.box {
+  width: 92%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+
+.card {
+  width: 25%;
+  height: 75%;
+  text-shadow: 2px 2px 5px black;
+
+}
+
+img {
+  box-shadow: 5px 5px 8px black;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.card a:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+/* .sec2:hover div:nth-of-type(1) {
+  transform: rotate(0deg);
+} */
+
+/* .sec2:hover div:nth-of-type(2) {
+  transform: rotate(90deg);
+}
+
+.sec2:hover div:nth-of-type(3) {
+  transform: rotate(180deg);
+}
+
+.sec2:hover div:nth-of-type(4) {
+  transform: rotate(270deg);
+} */
+
+/* .sec2:hover div:nth-of-type(5) {
+  transform: rotate(300deg);
+}
+
+.sec2:hover div:nth-of-type(6) {
+  transform: rotate(360deg);
+} */
+
+
+.sec3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  height: auto;
+  align-items: center;
+
+}
+
+
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px 20px 0 0;
+  margin-top: 50px;
+
+}
