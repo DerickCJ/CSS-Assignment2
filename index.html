@@ -4,15 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- the meta part -->
+  <meta name="description" content="Use color to show the emotion behind the song lyrics">
+  <meta name="color of the song lyrics" content="lyrics, song, color">
+  <title>Assignment2</title>
+  <!-- Add my CSS style -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Add my fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dela+Gothic+One&family=Fredericka+the+Great&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ribeye&family=Titan+One&display=swap"
+    rel="stylesheet">
   <!-- add jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./js/JS.js"></script>
-  <title>Document</title>
 </head>
 
 <body>
+  <!-- Nav header -->
   <header>
     <menu>
       <li><a href="#">Home</a></li>
@@ -20,71 +31,96 @@
       <li><a href="#">About Us</a></li>
       <li><a href="#">Contact Us</a></li>
     </menu>
-
-
   </header>
+  <!-- The main part -->
   <main>
+    <!-- First part : masthead with a mask -->
     <section class="masthead">
-      <h2>Welcome to</h2>
-      <h2>Sweet Treats</h2>
+      <h2>Welcome to ~</h2>
+      <h2>~ Sweet Treats</h2>
 
       <div class="mask">
-        <h1>Welcome to Sweet Treats!</h1>
+        <h1>Find Your Perfect Candy!</h1>
       </div>
     </section>
+
+    <!-- Second part : Text Description -->
+    <section class="sec1">
+      <div class="oval2"></div>
+      <h2 class="slide-up">Why Choose Us?</h2>
+      <p class="slide-up">
+        Welcome to Sweet Treats, your ultimate destination for the finest handcrafted candies. Whether you're looking
+        to satisfy your sweet tooth or find the perfect gift, our delightful treats are sure to bring joy to any
+        occasion.
+      </p>
+      <p class="slide-up">
+        At Sweet Treats, we promise to deliver the highest quality candies, made with love and passion. We are
+        dedicated to providing exceptional customer service and ensuring that every treat brings a smile to your face.
+        Thank you for choosing Sweet Treats!
+      </p>
+    </section>
+
+    <!-- Third part : Bestsellers with pictures -->
     <section class="sec2">
       <div class="oval">
-        <h2>Discover Our Bestsellers</h2>
+        <h2 class="slide-right">Our Bestsellers</h2>
       </div>
-      <div class="img-box">
-        <!-- <div class="box">
-          <div class="card"><a href="#"><img src="./image/0 (1).jpg" alt=""> </a>
-            <h3>Chews</h3>
-          </div>
-          <div class="card"><a href="#"><img src="./image/0 (1).png" alt=""> </a>
-            <h3>Truffle</h3>
-          </div>
-          <div class="card"><a href="#"><img src="./image/0 (2).jpg" alt=""> </a>
-            <h3>Gummies</h3>
-          </div>
-        </div> -->
-        <div class="box">
-          <div class="card"><a href="#"><img src="./image/0 (3).jpg" alt=""> </a>
-            <h3>Fruity</h3>
-          </div>
-          <div class="card"><a href="#"><img src="./image/0 (4).jpg" alt=""> </a>
-            <h3>Chocolate</h3>
-          </div>
-          <div class="card"><a href="#"><img src="./image/0 (5).jpg" alt=""> </a>
-            <h3>Caramel</h3>
-          </div>
+      <div class="box">
+        <div class="card slide-right"><a href="#"><img src="./image/0 (3).jpg" alt=""> </a>
+          <h3>Fruity</h3>
+        </div>
+        <div class="card slide-right"><a href="#"><img src="./image/0 (4).jpg" alt=""> </a>
+          <h3>Chocolate</h3>
+        </div>
+        <div class="card slide-right"><a href="#"><img src="./image/0 (5).jpg" alt=""> </a>
+          <h3>Caramel</h3>
         </div>
       </div>
     </section>
+
+    <!-- Forth part : Text Description -->
+    <section class="sec4">
+      <div class="oval2"></div>
+      <h2 class="slide-up">Our Story</h2>
+      <p class="slide-up">
+        Sweet Treats began as a small family business with a big dream: to create the most delightful and delicious
+        candies.
+        Over the years, we've grown, but our commitment to quality and creativity remains the same. Join us on our sweet
+        journey
+        and experience the magic of our handcrafted candies.
+      </p>
+      <p class="slide-up">
+        We believe in creating sweets that not only taste good but also do good. Our commitment to sustainability
+        includes using
+        eco-friendly packaging, sourcing ingredients responsibly, and reducing waste. Enjoy our candies with the peace
+        of mind
+        that comes from making a positive impact.
+      </p>
+    </section>
+
+    <!-- Fifth part : New Arrivals with pictures -->
     <section class="sec3">
-      <div class="img-box">
-        <div class="box">
-          <div class="card"><a href="#"><img src="./image/0 (1).jpg" alt=""> </a>
-            <h3>Chews</h3>
-          </div>
-          <div class="card"><a href="#"><img src="./image/0 (1).png" alt=""> </a>
-            <h3>Truffle</h3>
-          </div>
-          <div class="card"><a href="#"><img src="./image/0 (2).jpg" alt=""> </a>
-            <h3>Gummies</h3>
-          </div>
+      <div class="box">
+        <div class="card slide-right"><a href="#"><img src="./image/0 (1).jpg" alt=""> </a>
+          <h3>Chews</h3>
+        </div>
+        <div class="card slide-right"><a href="#"><img src="./image/0 (1).png" alt=""> </a>
+          <h3>Truffle</h3>
+        </div>
+        <div class="card slide-right"><a href="#"><img src="./image/0 (2).jpg" alt=""> </a>
+          <h3>Gummies</h3>
         </div>
       </div>
-      <!-- <h3>At Sweet Treats, <br>we believe <br>in bringing <br>joy through our delightful, <br>handcrafted <br>candies.
-        Our <br>passion
-        for
-        quality and
-        creativity ensures <br>that every <br>treat is a moment <br>of pure happiness. </h3> -->
-      <div class="oval"></div>
 
+      <div class="oval">
+        <h2 class="slide-up">New Arrivals</h2>
+      </div>
     </section>
   </main>
+
+  <!-- Footer -->
   <footer>
+    <!-- Left part : Contact Information -->
     <div class="footer-left">
       <div>
         <i class="fa fa-map-marker"></i>
@@ -100,18 +136,15 @@
       </div>
     </div>
 
-
+    <!-- Central Part : Copyright Notice -->
     <div class="footer-center">
-
       <p class="footer-company-name">&copy; 2024 Sweet Treats. All rights reserved.<br>
         Privacy Policy
       </p>
-
     </div>
 
-
+    <!-- Right part : Social Media -->
     <div class="footer-right">
-
       <div class="footer-icons">
         <img src="./image/Logo1.png" alt="logo" class="iconLogo">
         <a href="#" id="fa-facebook" class="fa fa-facebook"></a>
@@ -126,6 +159,7 @@
       </p>
     </div>
   </footer>
+
 </body>
 
 </html>

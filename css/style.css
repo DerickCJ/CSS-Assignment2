@@ -4,8 +4,7 @@
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
-  /* box-sizing: border-box; */
-  color: #ffffff
+
 }
 
 body {
@@ -34,7 +33,13 @@ menu {
   position: relative;
   font-size: 1.2em;
   font-weight: 800;
-  text-shadow: 3px 3px 8px rgb(0, 0, 0), -2px -2px 3px rgb(255, 0, 0);
+  text-shadow: 2px 2px 2px rgb(255, 255, 255), -2px -2px 5px rgb(255, 242, 0);
+  font-family: "Ribeye", serif;
+  font-size: 1.5em;
+}
+
+menu a {
+  color: rgb(237, 129, 23);
 }
 
 
@@ -91,70 +96,193 @@ menu::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 0);
   transition: clip-path 0.4s ease-in-out;
 }
 
-h2:nth-child(1) {
-  font-size: 2em;
+.masthead h2 {
   position: absolute;
+  animation-duration: 5S;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: mastheadMove;
+}
+
+@keyframes mastheadMove {
+  0% {
+    transform: rotate(5deg) translateY(0);
+  }
+
+  25% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: rotate(-5deg) translateY(30px);
+  }
+}
+
+.masthead h2:nth-child(1) {
   left: 10%;
   top: 40%;
 }
 
-h2:nth-child(2) {
-  font-size: 2.5em;
-  position: absolute;
+.masthead h2:nth-child(2) {
   left: 22%;
   top: 50%;
 }
 
 h1 {
+  font-family: "Titan One", sans-serif;
   font-size: 4em;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  font-size: 3em;
+  color: rgb(237, 129, 23);
+  font-family: "Fredericka the Great", serif;
+  text-shadow: 5px 5px 8px rgb(255, 255, 255), -2px -2px 3px rgb(255, 242, 0);
+
 }
 
 h3 {
-  color: #b1b1b1;
+  font-family: "Fredericka the Great", sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 2px;
   text-align: center;
-  text-shadow: 2px 2px rgb(255, 255, 255);
+  /* text-shadow: 2px 2px 3px rgb(0, 0, 0); */
+  padding: 10px;
+  animation-duration: 5S;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: zoomIn;
 
 }
 
+@keyframes zoomIn {
+  0% {
+    color: rgb(237, 129, 23);
+    transform: scale(1);
+  }
 
-/* 
-p {
+  50% {
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+  }
+
+  100% {
+    color: rgb(0, 0, 0);
+    transform: scale(1);
+  }
+}
+
+
+main p {
   font-size: 1.5em;
-  color: rgb(0, 0, 0);
-
-} */
+  font-weight: 500;
+  font-family: "Kanit", sans-serif;
+  margin: 1em;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+}
 
 .scrolledMask {
   clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 100% 0, 100% 100%, 50% 100%, 50% 0);
 }
 
-.sec2 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  width: 100%;
-  height: 60vh;
-  align-items: center;
-  margin-top: 5%;
-
+.sec1,
+.sec4 {
+  position: relative;
+  text-align: center;
+  padding: 5%;
+  margin: 2%;
 }
 
-.sec2 .oval {
-  width: 100%;
-  height: 80%;
-  background: linear-gradient(to right, rgb(132, 228, 252), rgb(203, 246, 255));
+.oval2 {
+  position: absolute;
+  width: 10%;
+  height: 30%;
   clip-path: ellipse(50% 50% at 50% 50%);
-  transform: rotate(20deg) translateX(-10%);
-  animation-name: ovalMove1;
   animation-duration: 5S;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  opacity: 0.5;
+}
 
+.sec1 .oval2 {
+  right: 0%;
+  top: 40%;
+  background: linear-gradient(to right, rgb(132, 228, 252), rgb(203, 246, 255));
+  animation-name: ovalMove1;
+
+}
+
+.sec4 .oval2 {
+  left: 0%;
+  bottom: 40%;
+  background: linear-gradient(to left, rgb(132, 228, 252), rgb(203, 246, 255));
+  animation-name: ovalMove2;
+}
+
+.slide-up {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.slide-up.active {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+
+.sec2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: 32vw;
+  align-items: center;
+}
+
+.slide-right {
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.slide-right.active {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.oval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  clip-path: ellipse(50% 50% at 50% 50%);
+  animation-duration: 5S;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.sec2 .oval {
+  background: linear-gradient(to right, rgba(132, 228, 252, 1), rgba(203, 246, 255, 1));
+  animation-name: ovalMove1;
+}
+
+.sec3 .oval {
+  background: linear-gradient(to left, rgba(132, 228, 252), rgba(203, 246, 255));
+  animation-name: ovalMove2;
 }
 
 @keyframes ovalMove1 {
@@ -171,19 +299,6 @@ p {
   }
 }
 
-
-.sec3 .oval {
-  width: 100%;
-  height: 80%;
-  background: linear-gradient(to left, rgb(132, 228, 252), rgb(203, 246, 255));
-  clip-path: ellipse(50% 50% at 50% 50%);
-  transform: rotate(-20deg) translateX(10%);
-  animation-name: ovalMove2;
-  animation-duration: 5S;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-}
 
 @keyframes ovalMove2 {
   0% {
@@ -209,7 +324,7 @@ p {
 
 
 .card {
-  width: 25%;
+  width: 26%;
   height: 75%;
 
 }
@@ -226,36 +341,13 @@ p {
   opacity: 0.7;
 }
 
-/* .sec2:hover div:nth-of-type(1) {
-  transform: rotate(0deg);
-} */
-
-/* .sec2:hover div:nth-of-type(2) {
-  transform: rotate(90deg);
-}
-
-.sec2:hover div:nth-of-type(3) {
-  transform: rotate(180deg);
-}
-
-.sec2:hover div:nth-of-type(4) {
-  transform: rotate(270deg);
-} */
-
-/* .sec2:hover div:nth-of-type(5) {
-  transform: rotate(300deg);
-}
-
-.sec2:hover div:nth-of-type(6) {
-  transform: rotate(360deg);
-} */
 
 
 .sec3 {
   display: grid;
   grid-template-columns: 2fr 1fr;
   width: 100%;
-  height: 70vh;
+  height: 32vw;
   align-items: center;
   overflow: hidden;
 }
@@ -272,20 +364,25 @@ footer {
 
 }
 
+footer a,
+p {
+  color: rgb(195, 195, 195);
+}
+
 .footer-icons {
   display: flex;
   align-items: center;
 }
 
 .footer-icons a {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-color: rgb(230, 230, 230);
   border-radius: 2px;
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(248, 157, 40);
   text-align: center;
-  line-height: 25px;
+  line-height: 30px;
   margin-left: 5px;
 }
 
@@ -296,6 +393,7 @@ footer {
 
 .footer-links {
   text-align: center;
+  font-size: 1.1em;
 }
 
 .footer-left p {
