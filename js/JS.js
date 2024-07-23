@@ -1,5 +1,5 @@
 $(window).on("scroll", function () {
-  if ($(this).scrollTop() > 100) {
+  if ($(this).scrollTop() > 60) {
     $("header").addClass("scrolledHeader");
     $(".mask").addClass("scrolledMask");
   } else {
@@ -25,9 +25,6 @@ function SlideUp() {
 }
 
 window.addEventListener("scroll", SlideUp);
-
-
-
 
 
 // Slide right
