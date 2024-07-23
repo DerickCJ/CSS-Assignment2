@@ -130,19 +130,19 @@ menu::before {
   position: absolute;
   bottom: 25%;
   left: 20%;
-  width: 200px;
-  height: 60px;
-  background: none;
-  border: none;
-  padding: 0;
+  width: 13em;
+  height: 3em;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  padding: 0.5em 1.5em;
+  font-family: "Ribeye", serif;
+  font-size: 1em;
+  /* text-shadow: 1px 1px 2px rgb(237, 129, 23); */
   cursor: pointer;
-  outline: none;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: #6bafff;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  transition: color 0.3s;
   animation: buttonZoom 2s infinite;
 }
 
@@ -154,14 +154,18 @@ menu::before {
   width: 100%;
   height: 100%;
   background: linear-gradient(45deg, #6bafff, #ff6b6b, #f7d06b);
-  border-radius: 30px;
   z-index: -1;
-  transition: background 0.3s ease;
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 .button:hover {
-  background-color: #ff6b6b;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 @keyframes buttonZoom {
